@@ -1,0 +1,126 @@
+/* style.css */
+
+/* 1. Base mobile-first */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0.5rem;
+  line-height: 1.5;
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+.site-header, .site-footer {
+  text-align: center;
+  background: #eee;
+  padding: 1rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.logo-home-icon {
+  margin-left: 0.5rem;
+}
+
+.baseline {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 0.3rem;
+}
+
+/* Navigation mois */
+.mois-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.mois-nav a {
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Main content */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Sections */
+.month-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  background: #f9f9f9;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+/* Formulaire centré avec flexbox */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre horizontalement */
+}
+
+input, textarea {
+  width: 90%; /* champ centré */
+  max-width: 500px; /* limite largeur sur grand écran */
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  box-sizing: border-box;
+}
+
+/* Print-friendly */
+@media print {
+  body, header, footer, nav, .month-section {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  nav.mois-nav {
+    display: none;
+  }
+  input, textarea {
+    border: 1px solid #000;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  .month-section {
+    padding: 1rem;
+  }
+}
